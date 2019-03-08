@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Rep Max Calculator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class='dropdown'>
+          <a class ='dropdown-toggle' data-toggle='dropdown'>Tools
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Calorie_Calc.html">Calorie Calculater</a></li>
+            <li><a href="OneRepMax.html">One Rep Max Calculater</a></li>
+            <li><a href="FFMI_Calc.html">ffmi Calculator</a></li>
+            <li><a href='StrengthLvl.html'>Strength Level</a></li>
+          </ul>
+      </li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class='container' style='width:1100px'>
+      <h1>One Rep Max Calculator</h1>
+      <hr>
+      <p>One-repetition maximum (one rep maximum or 1RM) in weight training is the maximum amount of
+        weight that a person can possibly lift for one repetition.
+        It may also be considered as the maximum amount of force that can be generated in one maximal contraction.
+        One repetition maximum can be used for determining an individual's maximum strength and is the method for determining
+        the winner in events such as powerlifting and weightlifting competitions. One repetition maximum can
+        also be used as an upper limit, in order to determine the desired "load" for an exercise (as a percentage of the 1RM).
+      </p>
+      <br>
+      <div><strong>Enter the Details:</strong></div>
+      <table class='table table-hover' style='margin-top:30px;width:50%;'>
+        <tr>
+          <td> Weight</td><td><div class='col-xs-7'><input class='form-control' id='WeightInp'></div></td>
+        </tr>
+        <tr>
+          <td> Repetition</td><td><div class='col-xs-7'><input class='form-control' id='RepInp'></div></td>
+        </tr>
+      </table>
+      <div  style='margin:0 auto;width:65%;margin-bottom:20px;'><button  class='btn btn-primary btn-lg' id='btn'>Calculate</button></div>
+      <div id='Show1RM' ></div>
+  </body•>
+</html>
+<script>
+  $(document).ready(function(){
+    $('#btn').click(function(){
+      let value=($('#WeightInp').val()*(1+$('#RepInp').val()/30)).toFixed(3);
+      $('#Show1RM').html('<strong style="font-size:20px;">Your one rep max is ' + value +'</strong>')
+    })
+  })
+  </script>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stength Level</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='appStrengthLvl.js'></script>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Website</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class='dropdown'>
+          <a class ='dropdown-toggle' data-toggle='dropdown'>Tools
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Calorie_Meter.html">Calorie Meter</a></li>
+            <li><a href="OneRepMax.html">One Rep Max Calculator</a></li>
+            <li><a href="FFMI_Calc.html">ffmi Calculator</a></li>
+            <li><a href='StrengthLvl.html'>Strength Level</a></li>
+          </ul>
+      </li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class='container' style='width:1100px'>
+      <h1>Strength Level</h1>
+      <hr>
+      <p style='padding-top:10px;'>This tool factors in more than your weight, but takes into account muscle mass and fat mass as well.
+        It is yet another great way to track your fat loss progress than just relying on the scale.</p>
+      <div style='margin:15px'>Enter the details:</div>
+      <table class='table table-hover' style='width:50%'>
+        <tr><td>Gender</td>
+        <td>
+          <div class="form-group col-xs-6">
+            <select class="form-control" id="sel1">
+              <option value=1>Male</option>
+              <option value=2>Female</option>
+            </select>
+          </div>
+        </td>
+        </tr>
+        <tr><td>Age</td>
+          <td>
+            <div class='col-xs-6'><input class='form-control' id='AgeInp' placeholder='years' value=19></div>
+          </td>
+        </tr>
+        <tr><td>Muscle</td>
+          <td>
+            <div class="form-group col-xs-6">
+              <select class="form-control" id="sel2">
+                <option value='Chest' selected='selected'>Chest</option>
+                <option value='Back'>Back</option>
+                <option value='Biceps'>Biceps</option>
+                <option value='Triceps'>Triceps</option>
+                <option value='Shoulders'>Shoulders</option>
+                <option value='Quads'>Quads</option>
+
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr><td>Exercises</td>
+          <td>
+            <div class="form-group col-xs-10" id='This'>
+              <select class="form-control" id="sel3"></select>
+            </div>
+          </td>
+        </tr>
+        <tr><td>Lift</td>
+          <td>
+            <div class='col-xs-6'><input class='form-control' id='WeightInp' placeholder='Kg'></div>
+          </td>
+        </tr>
+        <tr><td>Repitions</td>
+          <td>
+            <div class='col-xs-6'><input class='form-control' id='RepInp' value=1></div>
+          </td>
+        </tr>
+      </table>
+      <div  style='margin-bottom:15px'><button class='btn btn-primary btn-lg' id='btn' style='margin-left:20%'>Calculate</button></div>
+      <br>
+      <br>
+      <div id='RESULT'>
+        <!-- <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-star-o fa-2x" aria-hidden="true"></i> -->
+      </div>
+    </div>
+  </body>
+</html>

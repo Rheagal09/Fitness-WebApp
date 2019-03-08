@@ -1,0 +1,271 @@
+/* .navbar {
+  min-height: 80px;
+}
+body{
+  padding-top:90px;
+}
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  /* margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    /* padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}  */
+body{
+  padding-top: 60px;
+}
+.thead-dark{
+  background-color: black;
+  color:white
+}
+#result{
+  display:inline-block;
+  height:40px;
+
+  padding:10px;
+}
+.Muscles{
+  position:relative;
+}
+#background{
+  position:relative;
+}
+#background: hover{
+  border:20px;
+}
+#chest{
+  position: absolute;
+  top:22%;
+  left:24.3%;
+  width:13%;
+  opacity:0;
+}
+#trapsLeft{
+  position: absolute;
+  top:17.4%;
+  left:26.7%;
+  width:3.39%;
+  opacity:0;
+}
+#trapsRight{
+  position :absolute;
+  top:17.4%;
+  left:31.46%;
+  width:3.39%;
+  opacity:0;
+}
+#DeltoidsRight{
+  position:absolute;
+  top:21.1%;
+  left:34.1%;
+  width:5.6%;
+  opacity:0;
+}
+#DeltoidsLeft{
+  position:absolute;
+  top:21.1%;
+  width:5.6%;
+  left:22%;
+  opacity:0;
+}
+#BicepsLeft{
+  position:absolute;
+  top:26.8%;
+  width:4.1%;
+  left:20.9%;
+  opacity:0;
+
+}
+#BicepsRight{
+  position:absolute;
+  top:26.8%;
+  width:4.1%;
+  left:36.67%;
+  opacity:0;
+
+}
+#ForearmLeft{
+  position:absolute;
+  top:33.6%;
+  left:16.75%;
+  width:6.62%;
+  opacity:0;
+}
+#ForearmRight{
+  position:absolute;
+  top:33.6%;
+  left:38.18%;
+  width:6.62%;
+  opacity:0;
+}
+#Mid-Section{
+  position :absolute;
+  opacity:0;
+  top:28.67%;
+  left:27.44%;
+  width:6.42%;
+}
+#quads-a{
+  top:42.2%;
+  left:23.6%;
+  width:6.55%;
+  position:absolute;
+  opacity:0;
+}
+#quads-b{
+  top:42.2%;
+  width:6.55%;
+  left:31.4%;
+  position: absolute;
+  opacity: 0;
+
+}
+#calves-a{
+  position:absolute;
+  opacity:0;
+  top:64.59%;
+  left:23.19%;
+  width:4.67%;
+}
+#calves-b{
+  position:absolute;
+  opacity:0;
+  top:64.59%;
+  left:33.74%;
+  width:4.67%;
+}
+#BackTraps-A{
+  position:absolute;
+  opacity:0;
+  top:15.38%;
+  left:67.3%;
+  width:7%;
+}
+#BackTraps-B{
+  position:absolute;
+  opacity:0;
+  top:17.82%;
+  left:66.87%;
+  width:8.07%;
+}
+#Triceps-A{
+  position:absolute;
+  opacity: 0;
+  top:24.83%;
+  left:60.2%;
+  width:4.58%;
+}
+#Triceps-B{
+  position:absolute;
+  opacity: 0;
+  top:24.83%;
+  left:77.1%;
+  width:4.58%;
+}
+#Lats-A{
+  position: absolute;
+  opacity: 0;
+  top:26.66%;
+  left:64.7%;
+  width:6%;
+}
+#Lats-B{
+  position: absolute;
+  opacity: 0;
+  top:26.66%;
+  left:71.2%;
+  width:6%;
+}
+#LowerBack{
+  position: absolute;
+  opacity:0;
+  top:32.86%;
+  left:67.62%;
+  width:6.59%;
+}
+#Glutes{
+  position: absolute;
+  opacity:0;
+  top:41%;
+  left:64.89%;
+  width:12.08%;
+}
+#HamstringLeft{
+  top:47.49%;
+  left:63.75%;
+  width:6.67%;
+  position: absolute;
+  opacity: 0;
+
+}
+#HamstringRight{
+  top:47.49%;
+  left:71.47%;
+  width:6.67%;
+  position: absolute;
+  opacity: 0;
+
+}
+#BackCalves-A{
+  position: absolute;
+  opacity: 0;
+  top:64.43%;
+  left:61.94%;
+  width:4.8%;
+}
+#BackCalves-B{
+  position: absolute;
+  opacity: 0;
+  top:64.43%;
+  left:75.1%;
+  width:4.8%;
+}
+#BackForearms-A{
+  position: absolute;
+  opacity: 0;
+  top:33.5%;
+  left:56.1%;
+  width:6.36%;
+}
+#BackForearms-B{
+  position: absolute;
+  opacity: 0;
+  top:33.5%;
+  left:79.34%;
+  width:6.36%;
+}
+#DeltoidsLeftBack{
+  position: absolute;
+  opacity: 0;
+  top:19.29%;
+  left:61.5%;
+  width:5.7%;
+}
+#DeltoidsRightBack{
+  position: absolute;
+  opacity: 0;
+  top:19.29%;
+  left:74.6%;
+  width:5.7%;
+}
+#DeltoidsRightBack:hover,#DeltoidsLeftBack:hover,#BackForearms-A:hover,#BackForearms-B:hover,#BackCalves-A:hover,
+#BackCalves-B:hover,#HamstringRight:hover,#HamstringLeft:hover,#Glutes:hover, #LowerBack:hover,
+#Lats-B:hover,#Lats-A:hover,#Triceps-A:hover,#Triceps-B:hover,#BackTraps-B:hover,#BackTraps-A:hover,
+#calves-a:hover,#calves-b:hover,#quads-b:hover,#quads-a:hover,#Mid-Section:hover,#ForearmRight:hover,
+#ForearmLeft:hover,#BicepsRight:hover,#BicepsLeft:hover,#DeltoidsLeft:hover,#DeltoidsRight:hover,#trapsRight:hover,
+#chest:hover, #trapsLeft:hover{
+  opacity:1;
+}

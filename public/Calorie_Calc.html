@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class='dropdown'>
+          <a class ='dropdown-toggle' data-toggle='dropdown'>Tools
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Calorie_Calc.html">Calorie Calculater</a></li>
+            <li><a href="OneRepMax.html">One Rep Max Calculater</a></li>
+            <li><a href="FFMI_Calc.html">ffmi Calculator</a></li>
+            <li><a href='StrengthLvl.html'>Strength Level</a></li>
+          </ul>
+      </li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class='container' style='width:1100px;'>
+      <h1>Calorie Calculator</h1>
+      <hr>
+      <p>The Calorie Calculator can be used to estimate the number of calories a person needs to consume each day.
+         This calculator can also provide some simple guidelines for gaining or losing weight. Use the "metric units" tab
+         if the International System of Units (SI) is preferred. Harris Benedict formula is used for calculating results
+      </p>
+      <div style='margin:15px'>Enter the details:</div>
+      <table class='table table-hover' style='width:50%'>
+        <tr><td>Gender</td>
+        <td>
+          <div class="form-group col-xs-6">
+            <select class="form-control" id="sel1">
+              <option value=1>Male</option>
+              <option value=2>Female</option>
+            </select>
+          </div>
+        </td>
+        </tr>
+        <tr><td>Height</td>
+          <td>
+            <div class='col-xs-6'><input class='form-control' id='HeightInput' placeholder='cm' value=185></div>
+          </td>
+        </tr>
+        <tr><td>Weight</td>
+          <td>
+            <div class='col-xs-6'><input class='form-control' id='WInp' placeholder='kg' value=82></div>
+          </td>
+        </tr>
+        <tr><td>Age</td>
+          <td>
+            <div class='col-xs-6'><input class='form-control' id='AgeInp' placeholder='years' value=19></div>
+          </td>
+        </tr>
+        <tr><td>Exercise Routine</td>
+          <td>
+            <div class="form-group col-xs-10">
+              <select class="form-control" id="sel2">
+                <option value=0>No Exercise</option>
+                <option value=1>Little Exercise(1-3 times a week)</option>
+                <option value=2>Moderate Exercise(3-5 times a week)</option>
+                <option value=3>Heavy Exercise(5-7 times a week)</option>
+                <option value=4>Intense Exercise(2 times a day)</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr><td>Your Goal</td>
+          <td>
+            <div class="form-group col-xs-10">
+              <select class="form-control" id="sel3">
+                <option value=-4> Lose 1 kg per week</option>
+                <option value=-3> Lose 0.75 kg per week</option>
+                <option value=-2> Lose 0.5 kg per week</option>
+                <option value=-1> Lose 0.25 kg per week</option>
+                <option selected='selected' value=0> Stay the same weight</option>
+                <option value=1> Gain 0.25 kg per week</option>
+                <option value=2> Gain 0.5 kg per week</option>
+                <option value=3> Gain 0.75 kg per week</option>
+                <option value=4> Gain 1 kg per week</option>
+             </select>
+            </div>
+          </td>
+        </tr>
+    </table>
+    <div  style='margin-bottom:15px'><button class='btn btn-primary btn-lg' id='btn' style='margin-left:20%'>Calculate</button></div>
+    <br>
+    <h4><div id='result'></div></h4>
+    <h3>Formulas Used:</h3>
+    <br>
+    <ul class='list-group list-group-flush'>
+      <li class='list-group-item'><img src='/CaloriesBMR/MaleBMR.gif'></li>
+      <li class='list-group-item'><img src='/CaloriesBMR/MaleBMR1.gif'></li>
+      <li class='list-group-item'><img src='/CaloriesBMR/Calories.gif'></li>
+    </ul>
+    <br><br>
+    <table class='table table-bordered'>
+      <thead class='thead-dark'>
+        <tr>
+          <th scope='col'>Exercise Routine</th>
+          <th scope='col'>Calories Needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>No Exercise(0)</td><td><img src='/CaloriesBMR/1.2.gif'</td></tr>
+        <tr><td>Little Exercise(1-3 times a week)(1)</td><td><img src='/CaloriesBMR/1.3.gif'</td></tr>
+        <tr><td>Moderate Exercise(3-5 times a week)(2)</td><td><img src='/CaloriesBMR/1.4.gif'</td></tr>
+        <tr><td>Heavy Exercise(5-7 times a week)(3)</td><td><img src='/CaloriesBMR/1.5.gif'</td></tr>
+        <tr><td>Intense Exercise(2 times a day)(4)</td><td><img src='/CaloriesBMR/1.6.gif'</td></tr>
+      </tbody>
+    </table>
+    <br><br>
+    <table class='table table-bordered'>
+      <thead class='thead-dark'>
+        <tr>
+          <th scope='col'>Your Goal</th>
+          <th scope='col'>Goal Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td> Lose 1 kg per week</td><td><strong>-4</strong></td></tr>
+        <tr><td> Lose 0.75 kg per week</td><td><strong>-3</strong></td></tr>
+        <tr><td> Lose 0.5 kg per week</td><td><strong>-2</strong></td></tr>
+        <tr><td> Lose 0.25 kg per week</td><td><strong>-1</strong></td></tr>
+        <tr><td> Stay the same weight</td><td><strong>0</strong></td></tr>
+        <tr><td> Gain 0.25 kg per week</td><td><strong>1</strong></td></tr>
+        <tr><td> Gain 0.5 kg per week</td><td><strong>2</strong></td></tr>
+        <tr><td> Gain 0.75 kg per week</td><td><strong>3</strong></td></tr>
+        <tr><td> Gain 1 kg per week</td><td><strong>4</strong></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </body>
+</html>
+<script>
+  $(document).ready(function(){
+    $('#btn').click(function(){
+
+      let Height=$('#HeightInput').val();
+      let Weight=$('#WInp').val();
+      let age=$('#AgeInp').val();
+      // let Gender=$('#sel1').options[$('#sel1').selectedIndex].val();
+      let Sel1=document.getElementById('sel1');
+      let Gender=Sel1.options[Sel1.selectedIndex].value;
+      let Sel2=document.getElementById('sel2');
+      let Exercise=Sel2.options[Sel2.selectedIndex].value;
+      let Sel3=document.getElementById('sel3');
+      let Goal=Sel3.options[Sel3.selectedIndex].value;
+      console.log(Gender);
+      console.log(Exercise);
+      console.log(Goal)
+      let BMR;
+      if(Gender==1)
+        BMR=66.5 + 13.8*(Weight) + 5*(Height) - 6.8*age;
+      else
+        BMR=655.1 + 9.563*(Weight) + 1.85*(Height)- 4.676*age
+      let CaloricNeed=(BMR*(1.2+0.175*Exercise)+Goal*500).toFixed(3);
+      $('#result').html(' Your daily caloric need is ' + CaloricNeed +'.');
+      $('#result').css('border','1px solid black')
+    })
+
+  })
+</script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fat Free Mass Index Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    .Tabledata{
+      width:50%;
+      padding:4px;
+      }</style>
+      <link rel='stylesheet' href='style.css'>
+      <script src='app1.js'></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Website</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class='dropdown'>
+      <a class ='dropdown-toggle' data-toggle='dropdown'>Tools
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="Calorie_Meter.html">Calorie Meter</a></li>
+        <li><a href="OneRepMax.html">One Rep Max Calculator</a></li>
+        <li><a href="FFMI_Calc.html">ffmi Calculator</a></li>
+        <li><a href='StrengthLvl.html'>Strength Level</a></li>
+      </ul>
+  </li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+    <div class='container' style='width:1100px'>
+      <h1>FFMI Calculator</h1>
+      <hr>
+      <p style='padding-top:10px;'>This tool factors in more than your weight, but takes into account muscle mass and fat mass as well.
+        It is yet another great way to track your fat loss progress than just relying on the scale.</p>
+      <h3>Fat Free Mass Index Calculater</h3>
+      <div style='padding-bottom:20px;padding-top:20px;'><strong>Enter your details:</strong></div>
+      <div id='TableID' style='width:60%;'>
+        <table class='table table-hover'>
+          <tbody>
+            <tr>
+              <td class='Tabledata'><div class="Tabledata">Height</div></td>
+              <td><div class='col-xs-8'><input class='form-control' type='text' id='HeightInp' placeholder='cm'></div></td>
+            </tr>
+            <tr>
+              <td><div class='Tabledata'>Weight</div></td>
+              <td><div class='col-xs-8'><input class='form-control' type='text' id='WeightInp' placeholder='Kg'></div></td>
+            </tr>
+            <tr>
+              <td><div class="Tabledata">Body Fat</div></td>
+              <td><div class='col-xs-8'><input class='form-control' type='text' id='FatInp' placeholder='%'></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div  style='margin:0 auto;width:60%;margin-bottom:20px;'><button  class='btn btn-primary btn-lg' id='btn'>Calculate</button></div>
+      <div style='width:60%'>
+        <table class='table table-hover'>
+          <tbody>
+            <tr>
+              <td class='Tabledata'><div class="Tabledata">Fat Free Mass</div></td>
+              <td><div class='col-xs-8'><input class='form-control' type='text' id='FFM' placeholder='Kg'></div></td>
+            </tr>
+            <tr>
+              <td><div class='Tabledata'>Body Fat</div></td>
+              <td><div class='col-xs-8'><input class='form-control' type='text' id='BF' placeholder='Kg'></div></td>
+            </tr>
+            <tr>
+              <td><div class="Tabledata">FFMI</div></td>
+              <td><div class='col-xs-8'><input class='form-control' id='FFMI' type='text'></div></td>
+            </tr>
+            <tr>
+              <td><div class="Tabledata">Normalized FFMI</div></td>
+              <td><div class='col-xs-8'><input class='form-control' id='NFFMI' type='text'></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style='padding-top:15px;'>
+        <h3>Formulas</h3>
+        <br>
+        <ul class='list-group list-group-flush'>
+          <li class='list-group-item'><img src='/FFMIimages/FatFree.gif'></li>
+          <li class='list-group-item'><img src='/FFMIimages/FAT.gif'></li>
+          <li class='list-group-item'><img src='/FFMIimages/FFMI.gif'></li>
+          <li class='list-group-item'><img src='/FFMIimages/NFFMI.gif'></li>
+        </ul>
+      </div>
+
+  </body>
+</html>
