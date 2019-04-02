@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='../style.css'>
+    <script src='RandomText.js'></script>
+    <link rel='stylesheet' href='Template.css'>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class='dropdown'>
+          <a class ='dropdown-toggle' data-toggle='dropdown'>Tools
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../Calorie_Calc.html">Calorie Calculater</a></li>
+            <li><a href="../OneRepMax.html">One Rep Max Calculater</a></li>
+            <li><a href="../FFMI_Calc.html">ffmi Calculator</a></li>
+            <li><a href='../StrengthLvl.html'>Strength Level</a></li>
+          </ul>
+      </li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class='container' style='width:80%;'>
+      <h1 id='Heading'>Exercises for Back</h1>
+      <hr>
+      <div class='AllExercises'>
+
+      </div>
+    </div>
+  </body>
+</html>
+    <script src='MakeTemplate.js'></script>
+    <script>
+    function mouseOver(Obj){
+      console.log(Obj)
+      Obj.firstChild.style.visibility='hidden';
+      Obj.firstChild.style.width='0px';
+      Obj.firstChild.style.height='0px';
+      Obj.firstChild.style.margin='0px';
+      Obj.children[1].style.visibility='visible';
+      Obj.style.height='auto'
+    }
+    function mouseOut(Obj){
+      console.log("Hello")
+      Obj.firstChild.removeAttribute('style');
+      Obj.children[1].style.visibility='hidden';
+      Obj.style.height='125px'
+    }
+    </script>
