@@ -6,28 +6,19 @@ $(document).ready(function(){
   var t='Exercises for '
   part=part.replace(t,'')
   console.log(part)
+  var index=indexParts.indexOf(part)
   var Box=$('.AllExercises')
   function Fetch(){
     $.ajax({
       url:`NameOfExercise?Muscle=${part}`,
       success:function(data){
         listOfExercise=data;
-        random();
+        Append();
       }
     });
   }
   Fetch();
-  function random(){
-    fetch('RandomText.txt')
-    .then(response => response.text())
-    .then(text => PutVal(text))
-  }
-  function PutVal(text){
-    rawText=text;
-    console.log(listOfExercise)
-    Append();
 
-  }
   function ShowFullInfo(object){
     object.style.removeProperty('height')
   }
@@ -38,7 +29,7 @@ $(document).ready(function(){
       Temp.setAttribute('onmouseover','mouseOver(this)')
       Temp.setAttribute('onmouseout','mouseOut(this)')
       let infotext=document.createElement('div')
-      infotext.append(rawText)
+      infotext.append(allinfo[index][i])
       $(infotext).css('visibility','hidden')
       let nameHead=document.createElement('h1')
       nameHead.append(listOfExercise[i].name)
